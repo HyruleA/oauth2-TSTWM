@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: oauth2-TSTWM
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/turismo_database
+    username: postgres
+    password: 1400
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: Ov23liuaOV2YM2UClG9m
+            client-secret: 9eb09912937e146695977f50c76411b6d428585b
+          google:
+            client-id: YOUR_GOOGLE_CLIENT_ID
+            client-secret: YOUR_GOOGLE_CLIENT_SECRET
+
+logging:
+  level:
+    org.springframework.security: TRACE
